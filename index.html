@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Petit+Formal+Script&display=swap');
+
+/* * {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+} */
+
+body,
+html {
+  height: 100%;
+  background-color: lightpink;
+  margin: 0;
+  font-family: calibri, sans-serif;
+}
+
+#h1 {
+  min-height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(./basicali.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 0;
+  margin: 0;
+}
+
+#text {
+  position: absolute;
+  z-index: 1;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 40%; /* Adjust this value to move the positioned div up and down */
+  text-align: center;
+  width: 60%; /* Set the width of the positioned div */
+  font-family: "Petit Formal Script", cursive;
+  color: aliceblue;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px 0px;
+  overflow: hidden;
+  background-color: rgb(18, 50, 80);
+  border-bottom: 2px solid white;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  z-index: 1;
+}
+
+li {
+  float: left;
+  text-align: center;
+  padding: 1px 60px;
+  border-right: 1px solid white;
+}
+
+li:first-child {
+  padding: 1px 60px 1px 100px;
+}
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  z-index: 1;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: rgb(156, 27, 49);
+}
+
+/* original strategy for creating a horizonatal nav bar that failed lol */
+/* ul{
+  font-size: 25px;
+  color: aliceblue;
+  text-align: left;
+  padding: 2px 10px 10px 10px;
+  font-family: 'Courier New', Courier, monospace;
+  text-decoration: underline;
+  background-color: darkblue;
+  width: 100%;
+  height: 20px;
+  position:fixed;
+  top: -4%;
+  left: 0;
+  z-index: 1;
+  
+}
+li {
+  float: right;
+  top: -4%;
+  list-style-type: none;
+  font-size: 16px;
+  padding: 14px 16px;
+  border-right: 1px solid #bbb;
+}
+
+li a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+} */
+
+/* #li{
+  display: inline-block;
+  width: 100%;
+  list-style-type: none;
+  align-items: right;
+  font-size: 15px;
+  color: aliceblue;
+  padding: 2px 10px 10px 10px;
+  font-family: 'Courier New', Courier, monospace;
+  text-decoration: underline;
+  position:fixed;
+  top: 1%;
+  left: 70px;
+  z-index: 1;
+} */
+
+/* .listitems{
+  font-family: 'Courier New', Courier, monospace;
+  position: fixed;
+  top: -4%;
+  left: 14%;
+  width: 95%;
+  background-color: lightblue;
+  list-style: none;
+  padding: 5px;
+  z-index: 1;
+} */
+
+.p {
+  text-align: center;
+  position: relative;
+  bottom: 5%;
+}
+
+#noteborder {
+  border-top: rgb(255, 0, 157) 8px dashed;
+  margin: 20 auto;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  bottom: 5%;
+}
+
+@media screen and (max-width: 1300px) {
+  li {
+    float: left;
+    text-align: center;
+    padding: 1px 50px;
+    border-right: 1px solid white;
+  }
+
+  li:first-child {
+    padding: 1px 10px 1px 70px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  li {
+    float: left;
+    text-align: center;
+    padding: 1px 30px;
+    border-right: 1px solid white;
+  }
+
+  li:first-child {
+    padding: 1px 10px 1px 50px;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  li {
+    float: left;
+    text-align: center;
+    padding: 1px 10px;
+    border-right: 1px solid white;
+  }
+
+  li:first-child {
+    padding: 1px 10px 1px 30px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  li {
+    float: left;
+    text-align: center;
+    padding: 1px 5px;
+    border-right: 1px solid white;
+  }
+
+  li:first-child {
+    padding: 1px 5px 1px 5px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  #text {
+    font-size: 10px;
+  }
+  li {
+    font-size: 10px;
+    float: left;
+    text-align: center;
+    padding: 1px 5px;
+    border-right: 1px solid white;
+  }
+
+  li:first-child {
+    padding: 1px 5px 1px 5px;
+  }
+  #noteborder {
+    border: rgb(255, 0, 157) 4px dashed;
+    margin: 20 auto;
+    align-items: center;
+    text-align: center;
+    width: 375px;
+    position: relative;
+    left: 10%;
+    bottom: 5%;
+  }
+}
+</style>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Tribute to Alicat</title>
+  </head>
+  <body>
+    <div id="h1">
+        <div id="text">
+            <h1>A Tribute to Alicat</h1>
+        </div>
+    </div>
+
+    <!-- <div class="headimg">
+      <img
+        src="./basicali.jpg"
+        alt="cute alicat"
+        height="350px"
+        width="350px"
+      /> -->
+    </div>
+    <br />
+    <br />
+    <a name="top"></a>
+
+    <ul> 
+      <li><a href="#whoisalicat"> Who is Alicat?</a></li>
+      <li><a href="#interests">Interests of Alicat</a></li>
+      <li><a href="#memories">Memories of Alicat</a></li>
+      <li><a href="#forms">Different Forms of Alicat</a></li>
+      <li><a href="#note">Leave a Note for Alicat</a></li>
+    </ul>
+    <!--<ul>
+    Menu
+    
+    <div  name="listitems" class="listitems">
+    <a href="#whoisalicat">
+        <li name="whoisalicat">Who is Alicat?</li>
+    </a>
+    <a href="#interests">
+        <li name="interests">Interests of Alicat</li>
+    </a>
+    <a href="#memories">
+        <li name="memories">Memories of Alicat</li>
+    </a>
+    <a href="#forms">
+        <li name="forms">Different Forms of Alicat</li>
+    </a>
+    <a href="#note">
+        <li name="note">Leave a Note for Alicat</li>
+    </a>
+  </ul> -->
+  </div> 
+  <div class="p">
+    <br>
+    <br>
+    <a name="whoisalicat"></a>
+    <h2>Who is Alicat?</h2>
+    
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium
+      facilis reiciendis adipisci porro corrupti libero pariatur veniam
+      explicabo, consequatur suscipit nihil eos aut, sint, distinctio quidem
+      aliquam ipsa perferendis deleniti laboriosam in quia? Aperiam suscipit
+      quisquam reiciendis vero corrupti. Quo ducimus velit et corporis quaerat
+      sapiente placeat earum provident, facere, sunt, deleniti repudiandae? Ipsa
+      tempora non alias nulla obcaecati corrupti rerum dolores, possimus
+      consequatur quas, perferendis debitis? Dignissimos, ut illo in rerum
+      quisquam explicabo ipsum animi amet fugiat laboriosam aperiam molestias
+      aut adipisci voluptatibus at aliquid odio quam sit accusantium alias et
+      error! Assumenda vero, perspiciatis aliquid ipsam iste modi excepturi
+      alias distinctio, dignissimos possimus labore blanditiis eos rerum quam
+      quas porro praesentium error nisi laborum ad asperiores fugit! Sint dicta
+      eum hic quo? Sed facere vel itaque vero vitae repellendus minus illum
+      assumenda est nostrum aperiam cumque possimus quos natus labore
+      accusantium, autem incidunt perferendis eos ipsa amet impedit mollitia
+      voluptatibus. Quas vitae placeat blanditiis et velit adipisci id maxime
+      enim, impedit incidunt minus, nihil consequatur cum, vel eos voluptates
+      similique. Quas aliquam nulla amet minima in eligendi modi, quam veritatis
+      aperiam laborum maiores tempore ab dicta quos nobis quis nihil? Minima
+      laborum eaque similique voluptas quos quidem aliquid vel eius fugit
+      doloribus distinctio odio asperiores reprehenderit cupiditate amet
+      expedita hic, labore aliquam architecto itaque animi praesentium ex
+      eligendi. Officiis eligendi, nesciunt voluptate consequuntur amet porro
+      iusto mollitia sunt quasi quos doloribus ratione, aperiam rerum in harum
+      optio. Unde aliquam dignissimos dicta velit perferendis sapiente nulla
+      tenetur fuga, numquam minus commodi quaerat sint, culpa assumenda labore,
+      molestiae iure molestias ea! Blanditiis accusamus, omnis eveniet quis,
+      nemo, mollitia quisquam exercitationem hic dolorem sunt consectetur! Nam
+      omnis praesentium ipsa delectus ea nostrum quia quisquam veritatis error,
+      molestiae deleniti autem esse exercitationem pariatur incidunt architecto
+      asperiores rerum excepturi nemo voluptate quaerat? Fuga odit cum animi
+      non, sapiente eligendi cupiditate soluta eaque consectetur saepe odio iure
+      veritatis amet quos nulla rerum repellendus error aperiam a sunt delectus
+      id quis aspernatur tempore? Eius vero harum quas doloribus, odio ullam.
+      Quo nihil, excepturi obcaecati vel odio aperiam quos. Voluptas numquam
+      facilis ducimus, totam a odit, ad quo ipsam ullam ab ipsum quis optio
+      perferendis. Modi temporibus molestiae vel sapiente, saepe, perferendis,
+      suscipit perspiciatis possimus cupiditate quod dolorum velit ut excepturi
+      est ad amet. Mollitia animi eos, numquam perspiciatis ab eligendi, nobis
+      cumque aut ipsam aliquam soluta fuga odit. Reprehenderit, facilis
+      explicabo cupiditate voluptate asperiores illum eius assumenda minus
+      dolore libero! Sit nobis, facere sunt deleniti temporibus velit natus.
+      Perferendis aliquam molestias, cum consectetur, libero sunt doloribus
+      ducimus ad nemo expedita amet corrupti quibusdam sed quos dolorem eos
+      molestiae, ut in numquam! Excepturi hic aliquam, vitae aliquid ea numquam
+      quos tempora nesciunt est aspernatur suscipit delectus magnam amet.
+      Repellat iusto quasi ipsam iste saepe. Fuga autem eaque voluptatem vitae
+      eum vel! Deleniti molestiae tempora in veritatis. Atque, animi cum?
+      Excepturi, temporibus vero. Consequatur aperiam cupiditate quis, in
+      exercitationem dolore odit rem sequi atque cum magni ut laborum maiores
+      excepturi labore praesentium ea repellat nihil commodi ipsam?
+    </p>
+    <br>
+    <br>
+    <a name="interests"></a>
+    <h2>Interests of Alicat</h2>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel minus alias
+      earum quidem obcaecati commodi numquam quibusdam rem velit debitis
+      pariatur consequatur maiores saepe doloremque ab nobis voluptatum modi,
+      magnam eveniet nostrum id ratione tenetur? Nihil iusto sunt quae, dolore
+      veniam atque tempora excepturi distinctio fugiat porro aspernatur alias
+      inventore voluptatum amet id illo officiis enim provident animi ipsam
+      earum sapiente cupiditate? Soluta, voluptates porro quas recusandae
+      adipisci, deleniti natus perferendis ipsum nam repellat velit sint tenetur
+      voluptate ratione, ducimus placeat. Debitis impedit ad doloribus optio
+      illum minima ullam culpa fugit, corporis vitae, at quae voluptate sapiente
+      repudiandae distinctio veritatis amet! Id dicta quam temporibus ad a,
+      saepe corporis, laborum neque possimus magnam tempora officiis sint rerum
+      harum omnis tenetur tempore aliquam explicabo! Perferendis deserunt iste,
+      veniam quos voluptates architecto sed facilis, obcaecati labore natus
+      dolor ea? Quod asperiores repellendus aspernatur voluptatum distinctio,
+      sed sit porro molestias temporibus ex hic placeat, necessitatibus eum ea,
+      cum amet magni! Aperiam modi labore quod nam tempore aliquam, vero at
+      laborum nihil delectus nesciunt neque magni inventore illo numquam non
+      unde suscipit facilis dicta sapiente iusto quis et. Nulla dicta laborum
+      quam et iusto nisi vero quod iste pariatur velit? Nobis eos assumenda
+      nesciunt ut saepe! Dolor, pariatur ab suscipit odit et unde illum, tempore
+      enim optio ipsam quas, assumenda eos molestiae sunt expedita dolorum
+      accusantium repellat vero laboriosam veniam odio nesciunt. Temporibus
+      nihil voluptatem sit suscipit tempore provident quod quos repellat
+      incidunt eum minus repellendus, reprehenderit eaque earum, illum placeat
+      exercitationem ducimus ut excepturi ad error odio. Aliquid adipisci
+      suscipit laboriosam laborum. Fugiat perspiciatis vitae dolorum amet autem
+      non a voluptas facilis soluta nam dolorem asperiores, culpa dolores rem.
+      Eum a accusamus provident dicta iure aperiam ad veniam, blanditiis
+      deleniti voluptatibus ullam quibusdam! Esse itaque soluta consectetur
+      distinctio quis fugit odit nisi magni, voluptas deleniti tempora
+      blanditiis suscipit laborum tempore quo qui alias enim nihil ipsum
+      delectus porro ratione! Eum, ullam dolorem unde ducimus veniam culpa
+      voluptatem vitae quos maiores architecto non, mollitia delectus a debitis
+      nesciunt distinctio totam. Aspernatur incidunt, odit sunt illum fugiat,
+      earum optio distinctio repellendus consectetur quia aliquid vel numquam
+      accusantium necessitatibus, quasi hic! Atque ad laborum, beatae dolorum
+      iure ullam excepturi illum repellat, assumenda blanditiis illo magni
+      delectus possimus quasi. Tempore iusto laboriosam labore illo, error
+      tempora praesentium nisi placeat facere culpa voluptatibus sunt, magni
+      vel, esse provident nobis quam cumque ratione amet corporis omnis eaque!
+      Mollitia distinctio dolorum fuga quisquam cumque dolorem! Unde qui, non
+      vel eius nulla nobis quaerat molestias nesciunt saepe facere porro nam
+      labore adipisci ipsa illum, culpa magnam in eveniet. Repellat aut
+      provident odit nihil eaque minus quae sit, facilis doloribus autem
+      similique culpa earum modi commodi praesentium, amet deserunt alias
+      dolore? Dolores, minus voluptatibus! Dolorum itaque magnam suscipit quae
+      quam at repellat nostrum esse dolore beatae iste, ducimus, quaerat a vel
+      illo blanditiis. Libero incidunt eaque maiores totam sint? Quam tempore,
+      tempora ea iste accusantium alias. Minus nostrum perspiciatis excepturi,
+      vero aliquid accusamus, illo veniam, ipsam voluptatem ducimus est rerum
+      dignissimos id.
+    </p>
+    <br>
+    <br>
+    <a name="memories"></a>
+    <h2>Memories of Alicat</h2>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam adipisci,
+      obcaecati voluptates quo eos nobis nemo, praesentium ipsa voluptate quia
+      laborum deserunt nihil minus ex eveniet, omnis ipsam est. Iure in impedit
+      consequatur accusamus officiis delectus magni voluptas blanditiis eum,
+      nemo ea porro ratione neque cumque nisi modi deserunt inventore itaque
+      autem. Fuga aliquam, temporibus cupiditate facere molestiae libero
+      quibusdam doloribus molestias tempore obcaecati amet sint perferendis
+      pariatur alias placeat fugiat eos enim in non facilis eum, provident
+      quaerat ratione. Culpa facere eaque accusamus blanditiis harum autem
+      tenetur architecto delectus libero voluptatem nisi, in distinctio
+      consequatur excepturi alias temporibus, reprehenderit unde? Labore
+      adipisci nesciunt veniam laboriosam consectetur esse obcaecati! Dolorum
+      doloremque nisi porro, eligendi distinctio totam aliquid natus molestiae!
+      Reprehenderit molestias porro libero minus eius cum. Aut fuga culpa
+      reiciendis ad consectetur iste, optio aliquam dignissimos laborum sapiente
+      quibusdam ipsa sit accusamus. At a eaque, nam debitis molestias adipisci
+      consequuntur accusantium eos laboriosam culpa ab nesciunt ratione numquam
+      delectus tenetur fugit sit dolores quae voluptate! Ipsa veritatis numquam
+      cumque ut illum! Illo rerum molestias omnis mollitia, perferendis animi
+      fugiat modi iste veniam reiciendis optio accusantium. Minima sint
+      voluptatibus officiis id, magni enim odio accusamus a doloremque
+      dignissimos laboriosam similique esse natus aliquam, quod rem atque
+      reprehenderit, ipsum magnam impedit. Possimus omnis vero animi architecto
+      laudantium reiciendis error. Labore nisi autem unde repellendus ipsum esse
+      excepturi, architecto iusto maiores, deleniti quasi porro, explicabo
+      laborum. Excepturi dolor recusandae fugiat consequuntur accusamus. Ducimus
+      sed mollitia id et dignissimos quisquam quo alias molestias, natus nobis
+      soluta tempora dolore, consequuntur quos vitae voluptas consectetur
+      eveniet nostrum itaque voluptate? Optio corrupti velit est nesciunt quidem
+      hic, quisquam laboriosam architecto! Voluptas similique recusandae quo
+      quisquam soluta atque, exercitationem labore necessitatibus eligendi
+      explicabo aliquam ut veniam, voluptatibus cumque! Libero numquam totam nam
+      autem fugiat voluptas adipisci accusamus modi tempore magnam, itaque in
+      nostrum ut ducimus non debitis omnis harum similique quibusdam maiores rem
+      ratione. Deserunt voluptatibus nulla quisquam magni repellat fugit optio
+      tempore aperiam aspernatur repudiandae ducimus unde cum, a maxime pariatur
+      error neque inventore ea at molestias fuga illum consectetur eveniet
+      facere? Nemo recusandae, quis blanditiis vel nam facilis libero illum
+      numquam eum. Porro cumque quo reprehenderit ut cupiditate magnam culpa
+      tempora illo iure. Aliquid repudiandae minus mollitia similique. Eveniet
+      voluptatum earum beatae rem! Ex eos delectus quas! Hic, laboriosam
+      repellendus fugit incidunt tempora molestias iure minus natus vel quis
+      repellat illo eaque blanditiis numquam dolorem nobis quos quae id? Nemo,
+      officia ab iusto harum omnis laborum! Consequatur accusantium odit ullam
+      ab adipisci odio neque, est ratione nisi. Quae asperiores quis velit
+      exercitationem omnis odit voluptates id error suscipit aliquid, ratione
+      nobis dolor dignissimos aperiam nostrum quaerat earum nam alias, quasi
+      est. Error pariatur beatae aspernatur aut reprehenderit. Explicabo
+      molestiae ratione in repudiandae laudantium! Obcaecati, ad fugiat eligendi
+      deserunt similique consequuntur alias voluptatem dolore temporibus
+      excepturi corrupti dolores animi vero reprehenderit laboriosam ipsum!
+      Excepturi est labore blanditiis vero at ea omnis voluptates repudiandae
+      ducimus, ullam ex mollitia inventore deleniti reprehenderit. A nemo
+      quaerat aut, neque eius nulla!
+    </p>
+    <br>
+    <br>
+    <a name="forms"></a>
+    <h2>Different Forms of Alicat</h2>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo eveniet
+      quis illo voluptatem, pariatur eum incidunt quisquam, dolore accusantium
+      reiciendis praesentium. Velit, placeat. Adipisci, consequatur quas nemo
+      dolore in at fugiat possimus dolorem odio ducimus earum, optio obcaecati
+      quos inventore nesciunt magnam ipsa, laborum molestiae doloribus.
+      Similique, blanditiis molestias? Blanditiis cum quaerat perspiciatis vitae
+      quibusdam beatae, doloribus pariatur nulla impedit quam maiores iusto
+      soluta in voluptatem architecto accusamus sequi eligendi cumque maxime
+      corrupti? Quisquam natus expedita nesciunt pariatur commodi repellat aut!
+      Praesentium aliquid officiis ipsa est, fugiat qui blanditiis aperiam
+      voluptate commodi animi adipisci nobis eveniet sed consequatur ea odit!
+      Quis atque accusantium nostrum corrupti veritatis minus distinctio
+      ducimus? Sint voluptates nesciunt, sunt dolorem odit ipsam assumenda amet
+      non distinctio voluptate sit officiis iure, facere impedit illum
+      voluptatum sed, natus doloremque! Sint velit officiis commodi ut! Fugit
+      eius ullam eveniet quibusdam natus exercitationem magni architecto tempore
+      sint amet quae facere, rerum, deserunt inventore suscipit. Dolorum animi
+      ut sapiente odio rem earum sint fuga dolore quia magnam, quidem, facilis
+      esse perferendis modi quibusdam explicabo eaque suscipit nulla deleniti
+      minima vero vitae beatae corrupti veniam. Suscipit aliquam cupiditate quae
+      amet similique libero obcaecati, eveniet at quaerat quasi deserunt veniam
+      iste nisi in facere beatae cumque nobis sed rerum aut fuga aspernatur
+      totam! Soluta dolorum doloremque beatae! Nam soluta accusamus minus
+      assumenda quae incidunt? Illo odio fuga, consectetur culpa non maiores
+      dolore officiis dolorum incidunt adipisci eius doloremque nemo quisquam
+      enim distinctio vero deserunt, ducimus eveniet accusamus placeat delectus
+      cum quod eaque accusantium. Voluptatem, accusantium in id fugiat aperiam
+      quia nihil, vero ipsam corrupti molestiae nam ex qui corporis
+      reprehenderit quas veritatis illum quisquam rerum dolor nesciunt a velit.
+      Explicabo vitae veniam, quo corrupti voluptatibus debitis cupiditate neque
+      sint iure id reiciendis? Perspiciatis quas delectus placeat harum vitae
+      dolorum facere. Amet corrupti quaerat modi, tempora optio, facere
+      consectetur eos ipsum accusantium, velit eum architecto. Provident
+      consequuntur illum sequi blanditiis culpa, deserunt placeat voluptate
+      impedit aliquam labore fugiat ullam suscipit minima nemo illo voluptas
+      repellat dolor! Ullam, aut unde. Natus repellat accusantium nisi quaerat
+      ipsam dolore autem deserunt itaque quasi et nulla aliquam perferendis,
+      quod minima quia vel ratione nostrum nam voluptas est, alias fugiat iste.
+      Placeat, repellendus tempore. Quibusdam quae aliquam asperiores aut itaque
+      quos exercitationem, maxime dolorum ad optio dicta voluptas recusandae
+      omnis officia! Voluptatem, beatae aliquid! Saepe unde necessitatibus illo
+      vero provident explicabo labore dignissimos quam quis, itaque repellendus
+      esse amet voluptas expedita recusandae et sint alias soluta quas
+      perspiciatis sapiente? Sed dolor earum, ut, quasi delectus voluptatem,
+      asperiores corrupti nesciunt magnam incidunt debitis ex excepturi! Quo,
+      quam commodi. Architecto cum illum laudantium maxime ex qui esse
+      doloremque dolor! Velit cum iusto commodi voluptate in blanditiis,
+      exercitationem officia doloribus ratione temporibus accusamus fugit nisi
+      pariatur, aliquam reiciendis id ipsa odio. Mollitia fugiat earum aut
+      praesentium nisi accusamus minus eveniet. Nemo ratione autem et culpa
+      recusandae voluptate placeat quia quo eum iste, consectetur repellat
+      repellendus quas sequi voluptates labore impedit esse molestias. Ea quia
+      rem sed blanditiis deserunt error perspiciatis sunt nulla!
+    </p>
+  </div>
+    <a name="note"></a>
+    <div id="noteborder">
+    <h2>Leave a Note for Alicat</h2>
+    <form action="" method="post">
+      <label for="name">Name:</label>
+      <input id="name" name="name" type="text" />
+      <br />
+      <label for="relationship">Relationship: </label>
+      <select id="relationship" name="relationship">
+        <option selected="selected" value="friend">friend</option>
+        <option value="kinfolk">kinfolk</option>
+        <option value="gentleman caller">gentleman caller</option>
+        <option value="fan">fan</option>
+      </select>
+      <br />
+      <label for="likedtraits"> What do you like about alicat?</label>
+      <input
+        id="likedtraits"
+        checked="checked"
+        name="likedtraits"
+        type="checkbox"
+        value="smile"
+      /> smile
+      <input name="likedtraits" type="checkbox" value="laugh" /> laugh
+      <input name="likedtraits" type="checkbox" value="humor" /> humor
+      <input name="likedtraits" type="checkbox" value="brain" /> brain
+      <input name="likedtraits" type="checkbox" value="heart" /> heart
+      <input name="likedtraits" type="checkbox" value="aura" /> aura
+      <br />
+      <textarea id="comment" cols="50" name="note" rows="5">Note</textarea
+      ><br />
+      <label
+        ><input name="terms" type="checkbox" value="tandc" />Accept terms
+      </label>
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+    <a name="top" href="#top">back to top</a>
+  </body>
+</html>
