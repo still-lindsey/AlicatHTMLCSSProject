@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <style>
+      
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Petit+Formal+Script&display=swap');
 
-/* * {
+      
+      /* * {
   text-align: center;
   padding: 0;
   margin: 0;
@@ -19,6 +21,7 @@ html {
   height: 100%;
   background-color: lightpink;
   margin: 0;
+  padding: 0;
   font-family: calibri, sans-serif;
 }
 
@@ -45,7 +48,14 @@ html {
   color: aliceblue;
 }
 
-ul {
+.textback {
+  background-image: url(./fullpinksky.jpeg);
+  z-index: 999;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+ul.navbar {
   list-style-type: none;
   margin: 0;
   padding: 5px 0px;
@@ -84,66 +94,41 @@ li a:hover {
   background-color: rgb(156, 27, 49);
 }
 
-/* original strategy for creating a horizonatal nav bar that failed lol */
-/* ul{
+h2.who {
+  margin: -36px 0 0 0;
+  padding: 10px 0 5px 0;
+  font-size: 35px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+div.table {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
   font-size: 25px;
-  color: aliceblue;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  border-top: solid 30px whitesmoke;
+  border-bottom: solid 30px whitesmoke;
+}
+table,
+td {
   text-align: left;
-  padding: 2px 10px 10px 10px;
-  font-family: 'Courier New', Courier, monospace;
-  text-decoration: underline;
-  background-color: darkblue;
-  width: 100%;
-  height: 20px;
-  position:fixed;
-  top: -4%;
-  left: 0;
-  z-index: 1;
-  
+  padding: 10px;
+  margin: 5px;
 }
-li {
-  float: right;
-  top: -4%;
-  list-style-type: none;
-  font-size: 16px;
-  padding: 14px 16px;
-  border-right: 1px solid #bbb;
-}
-
-li a {
-  color: white;
-  text-align: center;
-  text-decoration: none;
-} */
-
-/* #li{
-  display: inline-block;
-  width: 100%;
-  list-style-type: none;
-  align-items: right;
-  font-size: 15px;
-  color: aliceblue;
-  padding: 2px 10px 10px 10px;
-  font-family: 'Courier New', Courier, monospace;
-  text-decoration: underline;
-  position:fixed;
-  top: 1%;
-  left: 70px;
-  z-index: 1;
-} */
-
-/* .listitems{
-  font-family: 'Courier New', Courier, monospace;
-  position: fixed;
-  top: -4%;
-  left: 14%;
-  width: 95%;
-  background-color: lightblue;
-  list-style: none;
+table,
+td.one {
+  text-align: right;
   padding: 5px;
-  z-index: 1;
+}
+/* table.style2, td{
+ text-align: left;
+}
+td.style2{
+ font-size: 15px;
+ border: solid 2px black;
 } */
-
 .p {
   text-align: center;
   position: relative;
@@ -160,7 +145,7 @@ li a {
   bottom: 5%;
 }
 
-#bottom{
+#bottom {
   margin: 20px;
   padding: 5px;
   text-align: center;
@@ -245,13 +230,13 @@ li a {
     bottom: 5%;
   }
   #h1 {
-  height: 200px;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(./basicalimobile.jpg);
-  background-size: cover;
-  padding: 0;
-  margin: 0;
-}
+    height: 200px;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url(./basicalimobile.jpg);
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+  }
 }
 </style>
     <link rel="stylesheet" href="styles.css" />
@@ -264,19 +249,11 @@ li a {
             <h1>A Tribute to Alicat</h1>
         </div>
     </div>
-
-    <!-- <div class="headimg">
-      <img
-        src="./basicali.jpg"
-        alt="cute alicat"
-        height="350px"
-        width="350px"
-      /> -->
-    </div>
+    <div class="textback">
     <br />
     <br />
     
-    <ul> 
+    <ul class="navbar"> 
       <li><a href="#whoisalicat"> Who is Alicat?</a></li>
       <li><a href="#interests">Interests of Alicat</a></li>
       <li><a href="#memories">Memories of Alicat</a></li>
@@ -303,67 +280,127 @@ li a {
         <li name="note">Leave a Note for Alicat</li>
     </a>
   </ul> -->
-  </div> 
   <div class="p">
-    <br>
-    <br>
     <a name="whoisalicat"></a>
-    <h2>Who is Alicat?</h2>
-    
+    <div class="s1">
+    <h2 class="who">Who is Alicat?</h2>
+    <div class="table">
+    <table>
+     <tr>
+      <td class="one">Born:</td>
+      <td>June 19, 1997 (23 years old)</td>
+     </tr>
+     <tr>
+      <td class="one">Birthplace:</td>
+      <td>Las Vegas, Nevada</td>
+     </tr>
+     <tr>
+      <td class="one">Occupation: </td>
+      <td>Brand Licensing and Strategic Partnerships for IMG</td>
+     </tr>
+     <tr>
+      <td class="one">Years active: </td>
+      <td>2019- present</td>
+     </tr>
+     <tr>
+      <td class="one">Residence: </td>
+      <td>New York City, New York</td>
+     </tr>
+     <tr>
+      <td class="one">Known for: </td>
+      <td>Kindest person you will ever meet
+</td>
+     </tr>
+     <tr>
+      <td class="one">Parent(s):
+</td>
+      <td>1.	Mom(1962- )
+2.	Dr. Dad(1962- )
+</td>
+     </tr>
+     <tr>
+      <td class="one">Siblings:
+</td>
+      <td>1.	Amanda Ryu(1995- )
+2.	Timothy Ryu(1999- )
+</td>
+     </tr>
+     <tr>
+      <td class="one">Religious Views: </td>
+      <td>Christian</td>
+     </tr>
+     <!-- <tr>
+      <td class="one">Education:</td>
+      <td>
+       <table class="style2">
+        <tr>
+         <td   class="style2">Elementary</td>
+         <td class="style2">2001-2008</td>
+         <td class="style2">Roy Gomm Elementary School</td>
+        </tr>
+        <tr>
+         <td class="style2">Middle</td>
+         <td class="style2">2008-2011</td>
+         <td class="style2">Sig Rogich Middle School</td>
+        </tr>
+        <tr>
+         <td class="style2">High</td>
+         <td class="style2">2011-2015</td>
+         <td class="style2">Advanced Technologies Academy: Business Management</td>
+        </tr>
+        <tr>
+         <td class="style2">University</td>
+         <td class="style2">2015-2019</td>
+         <td class="style2">The University of Texas at Austin: Business Honors and Marketing</td>
+        </tr>
+       </table> -->
+      </td>
+     </tr>
+    </table>
+   </div>
+   </div>
+    <!-- <div class="whoisalicat">
+    <div class="whoisalicath2">
+     <h2>Who is Alicat?</h2>
+   </div>
     <p>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium
-      facilis reiciendis adipisci porro corrupti libero pariatur veniam
-      explicabo, consequatur suscipit nihil eos aut, sint, distinctio quidem
-      aliquam ipsa perferendis deleniti laboriosam in quia? Aperiam suscipit
-      quisquam reiciendis vero corrupti. Quo ducimus velit et corporis quaerat
-      sapiente placeat earum provident, facere, sunt, deleniti repudiandae? Ipsa
-      tempora non alias nulla obcaecati corrupti rerum dolores, possimus
-      consequatur quas, perferendis debitis? Dignissimos, ut illo in rerum
-      quisquam explicabo ipsum animi amet fugiat laboriosam aperiam molestias
-      aut adipisci voluptatibus at aliquid odio quam sit accusantium alias et
-      error! Assumenda vero, perspiciatis aliquid ipsam iste modi excepturi
-      alias distinctio, dignissimos possimus labore blanditiis eos rerum quam
-      quas porro praesentium error nisi laborum ad asperiores fugit! Sint dicta
-      eum hic quo? Sed facere vel itaque vero vitae repellendus minus illum
-      assumenda est nostrum aperiam cumque possimus quos natus labore
-      accusantium, autem incidunt perferendis eos ipsa amet impedit mollitia
-      voluptatibus. Quas vitae placeat blanditiis et velit adipisci id maxime
-      enim, impedit incidunt minus, nihil consequatur cum, vel eos voluptates
-      similique. Quas aliquam nulla amet minima in eligendi modi, quam veritatis
-      aperiam laborum maiores tempore ab dicta quos nobis quis nihil? Minima
-      laborum eaque similique voluptas quos quidem aliquid vel eius fugit
-      doloribus distinctio odio asperiores reprehenderit cupiditate amet
-      expedita hic, labore aliquam architecto itaque animi praesentium ex
-      eligendi. Officiis eligendi, nesciunt voluptate consequuntur amet porro
-      iusto mollitia sunt quasi quos doloribus ratione, aperiam rerum in harum
-      optio. Unde aliquam dignissimos dicta velit perferendis sapiente nulla
-      tenetur fuga, numquam minus commodi quaerat sint, culpa assumenda labore,
-      molestiae iure molestias ea! Blanditiis accusamus, omnis eveniet quis,
-      nemo, mollitia quisquam exercitationem hic dolorem sunt consectetur! Nam
-      omnis praesentium ipsa delectus ea nostrum quia quisquam veritatis error,
-      molestiae deleniti autem esse exercitationem pariatur incidunt architecto
-      asperiores rerum excepturi nemo voluptate quaerat? Fuga odit cum animi
-      non, sapiente eligendi cupiditate soluta eaque consectetur saepe odio iure
-      veritatis amet quos nulla rerum repellendus error aperiam a sunt delectus
-      id quis aspernatur tempore? Eius vero harum quas doloribus, odio ullam.
-      Quo nihil, excepturi obcaecati vel odio aperiam quos. Voluptas numquam
-      facilis ducimus, totam a odit, ad quo ipsam ullam ab ipsum quis optio
-      perferendis. Modi temporibus molestiae vel sapiente, saepe, perferendis,
-      suscipit perspiciatis possimus cupiditate quod dolorum velit ut excepturi
-      est ad amet. Mollitia animi eos, numquam perspiciatis ab eligendi, nobis
-      cumque aut ipsam aliquam soluta fuga odit. Reprehenderit, facilis
-      explicabo cupiditate voluptate asperiores illum eius assumenda minus
-      dolore libero! Sit nobis, facere sunt deleniti temporibus velit natus.
-      Perferendis aliquam molestias, cum consectetur, libero sunt doloribus
-      ducimus ad nemo expedita amet corrupti quibusdam sed quos dolorem eos
-      molestiae, ut in numquam! Excepturi hic aliquam, vitae aliquid ea numquam
-      quos tempora nesciunt est aspernatur suscipit delectus magnam amet.
-      Repellat iusto quasi ipsam iste saepe. Fuga autem eaque voluptatem vitae
-      eum vel! Deleniti molestiae tempora in veritatis. Atque, animi cum?
-      Excepturi, temporibus vero. Consequatur aperiam cupiditate quis, in
-      exercitationem dolore odit rem sequi atque cum magni ut laborum maiores
-      excepturi labore praesentium ea repellat nihil commodi ipsam?
+     <ul class="whoisalicat">
+      <li>Born: June 19, 1997 (23 years old)
+</li>
+<br>
+      <li>Birthplace: Las Vegas, Nevada
+</li>
+<br>
+      <li>Occupation: Brand Licensing and Strategic Partnerships for IMG
+</li>
+<br>
+      <li>Years active: 2019- present
+</li>
+<br>
+      <li>Resident: New York City, New York
+</li>
+<br>
+      <li>Known for: Kindest person you will ever meet
+</li>
+<br>
+      <li>Parent(s):
+</li>
+<br>
+      <li>Siblings:
+</li>
+<br>
+      <li>Religious Views: Christian
+</li>
+<br>
+      <li>Education
+</li>
+<br>
+      <li>Honors and awards: 
+</li>
+     </ul>
+     
     </p>
+   </div> -->
     <br>
     <br>
     <a name="interests"></a>
@@ -399,28 +436,7 @@ li a {
       non a voluptas facilis soluta nam dolorem asperiores, culpa dolores rem.
       Eum a accusamus provident dicta iure aperiam ad veniam, blanditiis
       deleniti voluptatibus ullam quibusdam! Esse itaque soluta consectetur
-      distinctio quis fugit odit nisi magni, voluptas deleniti tempora
-      blanditiis suscipit laborum tempore quo qui alias enim nihil ipsum
-      delectus porro ratione! Eum, ullam dolorem unde ducimus veniam culpa
-      voluptatem vitae quos maiores architecto non, mollitia delectus a debitis
-      nesciunt distinctio totam. Aspernatur incidunt, odit sunt illum fugiat,
-      earum optio distinctio repellendus consectetur quia aliquid vel numquam
-      accusantium necessitatibus, quasi hic! Atque ad laborum, beatae dolorum
-      iure ullam excepturi illum repellat, assumenda blanditiis illo magni
-      delectus possimus quasi. Tempore iusto laboriosam labore illo, error
-      tempora praesentium nisi placeat facere culpa voluptatibus sunt, magni
-      vel, esse provident nobis quam cumque ratione amet corporis omnis eaque!
-      Mollitia distinctio dolorum fuga quisquam cumque dolorem! Unde qui, non
-      vel eius nulla nobis quaerat molestias nesciunt saepe facere porro nam
-      labore adipisci ipsa illum, culpa magnam in eveniet. Repellat aut
-      provident odit nihil eaque minus quae sit, facilis doloribus autem
-      similique culpa earum modi commodi praesentium, amet deserunt alias
-      dolore? Dolores, minus voluptatibus! Dolorum itaque magnam suscipit quae
-      quam at repellat nostrum esse dolore beatae iste, ducimus, quaerat a vel
-      illo blanditiis. Libero incidunt eaque maiores totam sint? Quam tempore,
-      tempora ea iste accusantium alias. Minus nostrum perspiciatis excepturi,
-      vero aliquid accusamus, illo veniam, ipsam voluptatem ducimus est rerum
-      dignissimos id.
+      distinctio quis fugit odit nisi magni,
     </p>
     <br>
     <br>
@@ -450,37 +466,7 @@ li a {
       voluptatibus officiis id, magni enim odio accusamus a doloremque
       dignissimos laboriosam similique esse natus aliquam, quod rem atque
       reprehenderit, ipsum magnam impedit. Possimus omnis vero animi architecto
-      laudantium reiciendis error. Labore nisi autem unde repellendus ipsum esse
-      excepturi, architecto iusto maiores, deleniti quasi porro, explicabo
-      laborum. Excepturi dolor recusandae fugiat consequuntur accusamus. Ducimus
-      sed mollitia id et dignissimos quisquam quo alias molestias, natus nobis
-      soluta tempora dolore, consequuntur quos vitae voluptas consectetur
-      eveniet nostrum itaque voluptate? Optio corrupti velit est nesciunt quidem
-      hic, quisquam laboriosam architecto! Voluptas similique recusandae quo
-      quisquam soluta atque, exercitationem labore necessitatibus eligendi
-      explicabo aliquam ut veniam, voluptatibus cumque! Libero numquam totam nam
-      autem fugiat voluptas adipisci accusamus modi tempore magnam, itaque in
-      nostrum ut ducimus non debitis omnis harum similique quibusdam maiores rem
-      ratione. Deserunt voluptatibus nulla quisquam magni repellat fugit optio
-      tempore aperiam aspernatur repudiandae ducimus unde cum, a maxime pariatur
-      error neque inventore ea at molestias fuga illum consectetur eveniet
-      facere? Nemo recusandae, quis blanditiis vel nam facilis libero illum
-      numquam eum. Porro cumque quo reprehenderit ut cupiditate magnam culpa
-      tempora illo iure. Aliquid repudiandae minus mollitia similique. Eveniet
-      voluptatum earum beatae rem! Ex eos delectus quas! Hic, laboriosam
-      repellendus fugit incidunt tempora molestias iure minus natus vel quis
-      repellat illo eaque blanditiis numquam dolorem nobis quos quae id? Nemo,
-      officia ab iusto harum omnis laborum! Consequatur accusantium odit ullam
-      ab adipisci odio neque, est ratione nisi. Quae asperiores quis velit
-      exercitationem omnis odit voluptates id error suscipit aliquid, ratione
-      nobis dolor dignissimos aperiam nostrum quaerat earum nam alias, quasi
-      est. Error pariatur beatae aspernatur aut reprehenderit. Explicabo
-      molestiae ratione in repudiandae laudantium! Obcaecati, ad fugiat eligendi
-      deserunt similique consequuntur alias voluptatem dolore temporibus
-      excepturi corrupti dolores animi vero reprehenderit laboriosam ipsum!
-      Excepturi est labore blanditiis vero at ea omnis voluptates repudiandae
-      ducimus, ullam ex mollitia inventore deleniti reprehenderit. A nemo
-      quaerat aut, neque eius nulla!
+      laudantium reiciendis error. Labore nisi autem
     </p>
     <br>
     <br>
@@ -523,23 +509,7 @@ li a {
       consequuntur illum sequi blanditiis culpa, deserunt placeat voluptate
       impedit aliquam labore fugiat ullam suscipit minima nemo illo voluptas
       repellat dolor! Ullam, aut unde. Natus repellat accusantium nisi quaerat
-      ipsam dolore autem deserunt itaque quasi et nulla aliquam perferendis,
-      quod minima quia vel ratione nostrum nam voluptas est, alias fugiat iste.
-      Placeat, repellendus tempore. Quibusdam quae aliquam asperiores aut itaque
-      quos exercitationem, maxime dolorum ad optio dicta voluptas recusandae
-      omnis officia! Voluptatem, beatae aliquid! Saepe unde necessitatibus illo
-      vero provident explicabo labore dignissimos quam quis, itaque repellendus
-      esse amet voluptas expedita recusandae et sint alias soluta quas
-      perspiciatis sapiente? Sed dolor earum, ut, quasi delectus voluptatem,
-      asperiores corrupti nesciunt magnam incidunt debitis ex excepturi! Quo,
-      quam commodi. Architecto cum illum laudantium maxime ex qui esse
-      doloremque dolor! Velit cum iusto commodi voluptate in blanditiis,
-      exercitationem officia doloribus ratione temporibus accusamus fugit nisi
-      pariatur, aliquam reiciendis id ipsa odio. Mollitia fugiat earum aut
-      praesentium nisi accusamus minus eveniet. Nemo ratione autem et culpa
-      recusandae voluptate placeat quia quo eum iste, consectetur repellat
-      repellendus quas sequi voluptates labore impedit esse molestias. Ea quia
-      rem sed blanditiis deserunt error perspiciatis sunt nulla!
+      ipsam dolore autem deserunt itaque quasi et
     </p>
   </div>
     <a name="note"></a>
@@ -582,5 +552,6 @@ li a {
   </div>
     <a id="bottom" href="#top">back to top</a>
      <br />
+     </div> 
   </body>
 </html>
