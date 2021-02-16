@@ -1,5 +1,3 @@
-# AlicatHTMLCSSProject
+# To View AlicatHTMLCSSProject
 
-To view:
-
-head to https://htmlpreview.github.io/ and paste the html url.
+Head to https://htmlpreview.github.io/ and paste the index.html url.
